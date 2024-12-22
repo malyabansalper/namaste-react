@@ -1,3 +1,6 @@
+import React from "react";
+import { createRoot } from "react-dom/client";
+
 const node1 = React.createElement(
   "div",
   { id: "parent-1" },
@@ -24,8 +27,13 @@ const heading = React.createElement(
   "Hello Malya from React!"
 );
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
 
 // setTimeout(() => root.render(el), 5000);
 
 root.render(el);
+
+// "main": "App.js",
+// this is a way to tell that this is the entry
+// point of our app but when parser is used it will conflict with this.
+// NPM will automatically generate this for us.
